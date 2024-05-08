@@ -36,6 +36,14 @@ public class ArgParser {
     }
 
     public boolean parseAll() {
+        if (argumentsToProcess.length == 0) {
+            if (args.length == 0) {
+                return true;
+            } else {
+                sendMessage("parsing.too_many_args");
+                return false;
+            }
+        }
         while (true) {
             boolean success = parseNext();
             VCommandParser.LOGGER.info(String.format("%d - %d", argumentId, argumentsToProcess.length));
@@ -90,6 +98,9 @@ public class ArgParser {
     }
 
     public List<String> autoComplete() {
+        if (argumentsToProcess.length == 0) {
+            return new ArrayList<>();
+        }
         while (true) {
             boolean success = parseNext();
             if (!success) {
