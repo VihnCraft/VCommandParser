@@ -20,9 +20,10 @@ messages: # Here you can edit the messages sent by VCommandParser. The messages 
   arg.float.invalid: <red>You provided an invalid number.
   arg.integer.invalid: <red>You provided an invalid integer.
   arg.option.invalid: <red>That is not a valid option.
+  arg.string.no_close: <red>A string was not closed. Add a quote to close it (").
 
 server-hook-enabled: false # Whether server hooks are enabled. Server hooks are intended to be used by servers with their own custom plugins. It allows certain VCommandParser functionality to be changed to more fit the server.
 
 
 # The line below tells VCommandParser the version of this config file. It should NOT be modified by hand.
-config-version: 0
+config-version: 1

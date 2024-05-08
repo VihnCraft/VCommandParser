@@ -54,7 +54,7 @@ public final class VCommandParser extends JavaPlugin {
         saveDefaultConfig(); // Make sure config exists
         FileConfiguration config = getConfig();
         int configVersion = config.getInt("config-version");
-        if (configVersion != 0) {
+        if (configVersion != 1) {
             LOGGER.severe("CONFIG OUT OF DATE: THERE MAY BE ISSUES");
             LOGGER.severe("CONFIG OUT OF DATE: THERE MAY BE ISSUES");
             LOGGER.severe("CONFIG OUT OF DATE: THERE MAY BE ISSUES");
